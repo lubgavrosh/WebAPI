@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using WebApi.Data.Entitties;
 using WebApi.Models.Category;
+using WebStore.Data.Entitties;
+using WebStore.Models.Category;
 
-namespace WebApi.Mapper
+namespace WebStore.Mapper
 {
     public class AppMapProfile : Profile
     {
@@ -10,6 +12,8 @@ namespace WebApi.Mapper
         {
             CreateMap<CategoryEntity, CategoryItemViewModel>();
             //.ForMember(x => x.Image, opt => opt.MapFrom(x => $"/images/{x.Image}"));
+
+            CreateMap<CategoryCreateViewModel, CategoryEntity>();
         }
     }
 }
