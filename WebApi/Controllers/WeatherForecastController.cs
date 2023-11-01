@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using WebStore;
 
-namespace WebApi.Controllers
+namespace WebStore.Controllers
 {
     [ApiController]
     [Route("[controller]")]

@@ -1,4 +1,4 @@
-﻿namespace WebApi.Models.Category
+﻿namespace WebStore.Models.Category
 {
     public class CategoryItemViewModel
     {

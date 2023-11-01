@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using WebStore.Data.Entitties;
 
-namespace WebApi.Data.Entitties
+namespace WebStore.Data.Entitties
 {
 
     [Table("tblCategories")]

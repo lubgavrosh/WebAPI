@@ -1,7 +1,8 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
-using WebApi.Data;
 using WebStore.Data;
+using WebStore.Data.Entitties.Identity;
 using WebStore.Mapper;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,7 +18,16 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors();
 
+
 builder.Services.AddAutoMapper(typeof(AppMapProfile));
+
+
+
+builder.Services.AddIdentity<UserEntity, RoleEntity>()
+    .AddEntityFrameworkStores<AppEFContext>()
+    .AddDefaultTokenProviders();
+
+
 
 var app = builder.Build();
 

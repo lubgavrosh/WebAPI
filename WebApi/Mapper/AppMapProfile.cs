@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using WebApi.Data.Entitties;
-using WebApi.Models.Category;
+using WebStore.Data.Entitties;
+using WebStore.Models.Category;
 using WebStore.Data.Entitties;
 using WebStore.Models.Category;
 

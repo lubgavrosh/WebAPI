@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApi.Data.Entitties;
-using WebApi.Data;
-using WebApi.Models.Category;
+using WebStore.Data.Entitties;
+using WebStore.Data;
+using WebStore.Models.Category;
 using WebStore.Data;
 using WebStore.Data.Entitties;
 using WebStore.Models.Category;
@@ -50,8 +50,9 @@ namespace WebStore.Controllers
         }
 
         [HttpPost("create")]
-        public async Task<IActionResult> Create([FromBody] CategoryCreateViewModel model)
+        public async Task<IActionResult> Create([FromForm] CategoryCreateViewModel model)
         {
+            var requst = this.Request;
             try
             {
                 var cat = _mapper.Map<CategoryEntity>(model);
@@ -81,7 +82,7 @@ namespace WebStore.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Put(int id)
+        public async Task<IActionResult> Dekete(int id)
         {
             var cat = await _context.Categories
                 .Where(x => x.IsDeleted == false)

@@ -1,4 +1,4 @@
-namespace WebApi
+namespace WebStore
 {
     public class WeatherForecast
     {
