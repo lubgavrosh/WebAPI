@@ -1,16 +1,15 @@
 ﻿namespace WebStore.Models.Account
 {
-    public class LoginViewModel
+    public class LoginModel
     {
         /// <summary>
         /// 
         /// </summary>
         /// <example>lysyi@gmail.com</example>
-        public string Email { get; set; }
+        public string Username { get; set; } = String.Empty;
         /// <summary>
-        /// 
+        /// Password of the user.
         /// </summary>
-        /// <example>123456</example>
-        public string Password { get; set; }
+        public string Password { get; set; } = String.Empty;
     }
 }
